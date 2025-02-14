@@ -381,19 +381,19 @@ const MacrodataRefinement = () => {
 
           {showCompletionStage > 0 && <CompletionScene />}
 
-          <div className="max-w-4xl mx-auto">
+          <div className="max-w-sm md:max-w-md w-full p-4 md:p-8 rounded-lg border-2 border-green-500">
             <div className="text-center mb-8 h-8">
-              <p className="text-green-500 animate-fade">{wellnessMessage}</p>
+              <p className="text-green-500 animate-fade mb-8">{wellnessMessage}</p>
             </div>
 
-            <div className="grid grid-cols-2 gap-8">
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-4 md:gap-8">
               {/* Numbers Display */}
-              <Card className="bg-gray-800 p-4 border-gray-700">
-                <h2 className="text-lg mb-4 flex items-center">
+              <Card className="bg-gray-800 p-3 md:p-4 border-gray-700">
+                <h2 className="text-base md:text-lg mb-4 flex items-center">
                   <AlertCircle className="w-4 h-4 mr-2 text-green-500" />
                   Available Numbers
                 </h2>
-                <div className="grid grid-cols-4 gap-4">
+                <div className="grid grid-cols-2 sm:grid-cols-4 gap-2 md:gap-4">
                   {numbers.map(number => (
                     <button
                       key={number.id}
@@ -414,12 +414,12 @@ const MacrodataRefinement = () => {
               </Card>
 
               {/* Bins Display */}
-              <Card className="bg-gray-800 p-4 border-gray-700">
+              <Card className="bg-gray-800 p-3 md:p-4 border-gray-700">
                 <h2 className="text-lg mb-4 flex items-center">
                   <AlertCircle className="w-4 h-4 mr-2 text-green-500" />
                   Emotional Categorization
                 </h2>
-                <div className="grid grid-cols-2 gap-4">
+                <div className="grid grid-cols-2 gap-2 md:gap-4">
                   {Object.entries(bins).map(([binName, bin]) => (
                     <button
                       key={binName}
